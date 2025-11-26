@@ -1,15 +1,30 @@
-# Guess the Closest Number
+# Guess the Closest Number Game
 
-Small CLI game implemented in [guess the closest number.py](guess the closest number.py).  
-Key variables: [`player_1`](guess the closest number.py), [`player_2`](guess the closest number.py), [`player_3`](guess the closest number.py), [`random_number`](guess the closest number.py), [`p1_differnce`](guess the closest number.py), [`p2_differnce`](guess the closest number.py), [`p3_differnce`](guess the closest number.py), [`p_differnce`](guess the closest number.py), [`minimum_diff`](guess the closest number.py).
+This is a simple Python-based command-line game where three players guess a number, and the program determines the winner based on whose guess is closest to a randomly generated number.
 
-## Description
-The script asks three players to enter integers, generates a random integer in [1, 10], and declares the player whose guess is closest to the random number as the winner. The intended distance metric is the absolute difference $|player_i - random\_number|$, and the winner is the index that minimizes that distance:
-$$
-\arg\min_i |player_i - random\_number|
-$$
+---
 
-## Usage
-Run with Python 3:
-```sh
-python "guess the closest number.py"
+## How It Works
+
+1. **Input from Players**:  
+   Each of the three players is prompted to enter a number.
+
+2. **Random Number Generation**:  
+   The program generates a random number between 1 and 10 (inclusive).
+
+3. **Difference Calculation**:  
+   The program calculates the difference between each player's guess and the random number.
+
+4. **Determine the Winner**:  
+   The player whose guess is closest to the random number (i.e., has the smallest difference) is declared the winner.
+
+---
+
+## Code Walkthrough
+
+### 1. **Player Input**
+The program takes input from three players:
+```python
+player_1 = int(input("Enter a Number Player 1: "))
+player_2 = int(input("Enter a Number Player 2: "))
+player_3 = int(input("Enter a Number Player 3: "))
