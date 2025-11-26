@@ -28,3 +28,71 @@ The program takes input from three players:
 player_1 = int(input("Enter a Number Player 1: "))
 player_2 = int(input("Enter a Number Player 2: "))
 player_3 = int(input("Enter a Number Player 3: "))
+
+Follow the prompts to enter three numbers.
+
+Example
+User input:
+
+Player 1: 4
+Player 2: 7
+Player 3: 5
+If the random number is 6, distances are 
+∣
+4
+−
+6
+∣
+=
+2
+∣4−6∣=2, 
+∣
+7
+−
+6
+∣
+=
+1
+∣7−6∣=1, 
+∣
+5
+−
+6
+∣
+=
+1
+∣5−6∣=1 and the winner would be Player 2 (ties are not currently resolved).
+
+Known issues & suggestions
+The current code computes signed differences (p1_differnce, p2_differnce, p3_differnce) instead of absolute differences; use absolute values to get correct results.
+Tie cases are not handled (two players equally close). Consider reporting a tie or selecting a deterministic tie-breaker.
+Variable names contain a typo (differnce → difference) — renaming improves readability.
+Possible improvement (fix)
+Replace difference calculations with absolute values and add tie handling, e.g. compute distances via 
+∣
+p
+l
+a
+y
+e
+r
+i
+−
+r
+a
+n
+d
+o
+m
+_
+n
+u
+m
+b
+e
+r
+∣
+∣player 
+i
+​
+ −random_number∣, then select all indices achieving the minimum and report either one or "tie".
