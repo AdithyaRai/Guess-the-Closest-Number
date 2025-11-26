@@ -34,7 +34,7 @@ This is a simple Python-based command-line game where three players guess a numb
    p2_differnce = abs(player_2 - random_number)
    p3_differnce = abs(player_3 - random_number)
 
-##Example Run
+## Example Run
 Input:
 * Player 1: 4
 * Player 2: 7
