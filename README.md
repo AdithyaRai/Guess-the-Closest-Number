@@ -1,28 +1,15 @@
-Guess the Closest Number
-Simple Python console game where three players each guess a number (1–10). The program generates a random target number and the player whose guess is closest wins.
+# Guess the Closest Number
 
-File
-c:\Users\Adithya\Documents\C++ Assignment\HtmlP\guess the closest number.py
-Requirements
-Python 3.x
-How to run
-Open a terminal and run:
+Small CLI game implemented in [guess the closest number.py](guess the closest number.py).  
+Key variables: [`player_1`](guess the closest number.py), [`player_2`](guess the closest number.py), [`player_3`](guess the closest number.py), [`random_number`](guess the closest number.py), [`p1_differnce`](guess the closest number.py), [`p2_differnce`](guess the closest number.py), [`p3_differnce`](guess the closest number.py), [`p_differnce`](guess the closest number.py), [`minimum_diff`](guess the closest number.py).
 
-Gameplay
-Each of three players enters an integer guess.
-The script generates a random integer between 1 and 10.
-It computes which player's guess is closest and prints the winner.
-Example session
-Known issues
-Uses signed difference instead of absolute distance; negative values can produce wrong winner.
-Ties are not handled — if two players are equally close, the script picks the first matching minimum.
-No input validation — non-integer input raises an error.
-The random target is not shown to players (useful for debugging).
-Suggested improvements
-Use absolute differences: abs(guess - random_number).
-Handle ties (announce multiple winners or a draw).
-Validate input and re-prompt on invalid entries.
-Print the generated random number for clarity or debugging.
-Allow configurable number of players or multiple rounds and keep score.
-License
-Free to use and modify.
+## Description
+The script asks three players to enter integers, generates a random integer in [1, 10], and declares the player whose guess is closest to the random number as the winner. The intended distance metric is the absolute difference $|player_i - random\_number|$, and the winner is the index that minimizes that distance:
+$$
+\arg\min_i |player_i - random\_number|
+$$
+
+## Usage
+Run with Python 3:
+```sh
+python "guess the closest number.py"
